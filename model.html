@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+
+
+<html> 
+	<head>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<link rel="stylesheet" href="CSSMockup.CSS">
+	</head>
+	<body>
+		<div id="bg">
+		  <img src="https://wallup.net/wp-content/uploads/2015/12/145694-landscape-highway.jpg" alt="">
+		</div>
+        <div id="bannerMake">
+        <img style="grid-column: 5; grid-row: 1; filter: invert(1);
+        padding-left: 70%; padding-top: 10px;"
+        />
+         <h1 style="grid-column: 3; grid-row: 1; font-family: Verdana; font-weight: bold;
+         font-size:50px; color: white;">Car Model</h1>
+	 	</div>
+		<div id = "backButton">
+			<button onclick=location.replace("CarMake.html") style="grid-column: 1; grid-row:1">Back</button>
+		</div>
+	 <br><br><br><br>
+		<center><h4 style = "font-family: Verdana;font-size:35px;font-weight: 300;">Enter Model:</h4></center>
+		<div id = "modelForm">
+		<form>
+			<label for="vehicle1"> <input type="checkbox" name="model" value="Civic" id="model1" />Civic</label><br>
+			<label for="vehicle1"> <input type="checkbox" name="model" value="Accord" id="model2" />Accord</label><br>
+			<label for="vehicle1"> <input type="checkbox" name="model" value="Odyssey" id="model3" />Odyssey</label><br>
+			<label for="vehicle1"> <input type="checkbox" name="model" value="Pilot" id="model4" />Pilot</label><br>
+			<label for="vehicle1"> <input type="checkbox" name="model" value="Passport" id="model5" />Passport</label><br><br>
+		  	<input style = "font-family:Verdana;"id = "x" type="button" onclick="submitButton('model')" value="Submit" />
+		</form>
+	</div>
+		<script>
+			function submitButton(name){
+				const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+				let values = [];
+				checkboxes.forEach((checkbox) => {
+				values.push(checkbox.value);
+				});
+				helpPage(values);
+			}
+			function helpPage(values){
+				if (values == "Civic"){
+					location.replace("helpPage.html")
+				}
+			}
+		</script>
+		</body>
+</html> 

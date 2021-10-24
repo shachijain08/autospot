@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="CSSMockup.CSS">
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Page Title</title>
+</head>
+<body>
+    <div id="controller">
+        <div id="banner">
+         <h1 style="grid-column: 3; grid-row: 1; font-family: Arial, Helvetica, sans-serif; font-weight: bold;
+         font-size:78px; color: white;">Autospot™</h1>
+    </div>
+	<div id = "backButton">
+		<button onclick=location.replace("HTMLMockup.html") style="grid-column: 1; grid-row:1">Back</button>
+	</div>
+    <div id="pictureGrid">
+        <img src="istockphoto-177228248-612x612.jpg" width = 300px height = 300px style="overflow: hidden;" onmousedown="windowAdvance()" >
+        <img src="OIP.iRBT1oS79zgD-CGpw61AKwHaEg.jpg" width = 300px height = 300px style="overflow: hidden;" onmousedown="mirrorAdvance()">
+        <img src="R.a2edb77d91cc1e95b3a91af87b13367a.jpg" width = 300px height = 300px style="overflow: hidden;" onmousedown="diskBreakAdvance()">
+        <img src="s-l1000.jpg" width = 300px height = 300px style="overflow: hidden;" onmousedown="batteryAdvance()">
+    </div>
+
+</body>
+</html>
+
+<script>
+    function mirrorAdvance(){
+        window.location.href = "HTMLMirror.HTML";
+    }
+    function windowAdvance(){
+        window.location.href = "HTMLWindow.HTML";
+    }
+    function batteryAdvance(){
+        window.location.href = "HTMLBattery.HTML";
+    }
+    function diskBreakAdvance(){
+        window.location.href = "HTMLDiskBreak.HTML";
+    }
+
+</script>
+  

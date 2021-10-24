@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+
+
+<html> 
+	<head>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<link rel="stylesheet" href="CSSMockup.CSS">
+	</head>
+	<body>
+		<div id="bg">
+		  <img src="https://wallup.net/wp-content/uploads/2015/12/145694-landscape-highway.jpg" alt="">
+		</div>
+        <div id="bannerMake">
+        <img style="grid-column: 5; grid-row: 1; filter: invert(1);
+        padding-left: 70%; padding-top: 10px;"
+        />
+         <h1 style="grid-column: 3; grid-row: 1; font-family:Verdana; font-size:50px; color: white;">Car Make</h1>
+	 	</div>
+		<div id = "backButton">
+			<button onclick=location.replace("HTMLMockup.html") style="grid-column: 1; grid-row:1">Back</button>
+		</div>
+	 <br><br><br><br>
+		<center><h4 style = "font-family: Verdana; font-size: 30px; font-weight: 300; ">Enter Make:</h4></center>
+		<div id = "part1">
+		<form>
+			<label for="vehicle1"> <input type="checkbox" name="car" value="Toyota" id="vehicle1" />Toyota</label><br>
+			<label for="vehicle1"> <input type="checkbox" name="car" value="Chevrolet" id="vehicle2" />Chevrolet</label><br>
+			<label for="vehicle1"> <input type="checkbox" name="car" value="Honda" id="vehicle3" />Honda</label><br>
+			<label for="vehicle1"> <input type="checkbox" name="car" value="Ford" id="vehicle4" />Ford</label><br>
+			<label for="vehicle1"> <input type="checkbox" name="car" value="Mercedes-Benz" id="vehicle5" />Mercedes-Benz</label><br>
+		</form>
+	</div>
+	<div id = "part2">
+		<form>
+			<label for="vehicle1"> <input type="checkbox" name="car" value="Jeep" id="vehicle6" />Jeep</label><br>
+			<label for="vehicle1"> <input type="checkbox" name="car" value="BMW" id="vehicle7" />BMW</label><br>
+			<label for="vehicle1"> <input type="checkbox" name="car" value="Porsche" id="vehicle8" />Porsche</label><br>
+			<label for="vehicle1"> <input type="checkbox" name="car" value="Nissan" id="vehicle9" />Nissan</label><br>
+			<label for="vehicle1"> <input type="checkbox" name="car" value="Lexus" id="vehicle10" />Lexus</label><br><br>
+			<div id = "submit">
+		  	<input style = "font-family: Verdana;font-size:15px"id = "x" type="button" onclick="submitButton('car')" value="Submit" />
+		</div>
+		</form>
+	</div>
+	
+		<script>
+			function submitButton(name){
+				const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+				let values = [];
+				checkboxes.forEach((checkbox) => {
+				values.push(checkbox.value);
+				});
+				modelPage(values);
+			}
+			function modelPage(values){
+				if (values == "Honda"){
+					location.replace("model.html")
+				}
+			}
+		</script>
+		</body>
+</html> 
